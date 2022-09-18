@@ -1,0 +1,36 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  margin: 0;
+  height: 100%;
+  background-color: rgb(241,242,245);
+}
+
+.container{
+margin: auto 550px;
+}
+
+h1, p {
+  font-weight: bold;
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(42, 42, 106);
+}
+
+p{
+  color: green;
+  font-size: 150px;
+  margin: auto 700px;
+}
+
+#btns{
+  margin-left: 630px;
+}
+
+
+
+
