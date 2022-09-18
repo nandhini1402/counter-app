@@ -1,28 +1,25 @@
-var b1 = document.querySelector("#dec");
+document.addEventListener('DOMContentLoaded',  () => {
+  var decreaseBtn = document.querySelector(".decreaseBtn");
+  var resetBtn = document.querySelector(".resetBtn");
+  var increaseBtn = document.querySelector(".increaseBtn");
+  var countEle = document.querySelector("#count");
 
-b1.addEventListener("click", function(){
+  resetBtn.addEventListener("click", () => {
+    countEle.textContent = 0;
+  });
 
-  var count_value = document.getElementById("count").innerText;
-  var decrement = Number(count_value) - 1;
-  if(decrement >= 0)
-  {
-  document.getElementById("count").innerHTML = decrement;
-  }
-});
+  decreaseBtn.addEventListener("click", () => {
+    var countValue = countEle.textContent;
+    var decrementCount = Number(countValue) - 1;
+    
+    if (decrementCount >= 0) {
+      countEle.textContent = decrementCount;
+    }
+  });
 
-var b2 = document.querySelector("#reset");
-
-b2.addEventListener("click", function(){
-
-  document.getElementById("count").innerHTML = 0;
-
-});
-
-var b3 = document.querySelector("#inc");
-
-b3.addEventListener("click",function(){
-
-  var count_value = document.getElementById("count").innerText;
-  var increment = Number(count_value) + 1;
-  document.getElementById("count").innerHTML = increment
+  increaseBtn.addEventListener("click",() => {
+    var countValue = countEle.textContent;
+    var incrementCount = Number(countValue) + 1;
+    countEle.textContent = incrementCount;
+  });
 });
